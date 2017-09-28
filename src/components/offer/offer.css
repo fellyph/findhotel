@@ -1,0 +1,27 @@
+
+.offer {
+  background: #fff;
+  display: flex;
+  width: 100%;
+}
+
+.offer .description {
+  width: 50%;
+}
+
+.offer .stars {
+  list-style: none;
+}
+
+.offer .stars li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.offer .stars li.filled {
+  color: darkred;
+}
+
+.offer .thumb {
+
+}
