@@ -1,14 +1,29 @@
+.offer {
+  background: #fff;
+  display: flex;
+  width: 100%; }
+
+.offer .description {
+  width: 50%; }
+
+.offer .stars {
+  list-style: none; }
+
+.offer .stars li {
+  display: inline-block;
+  margin-right: 1em; }
+
+.offer .stars li.filled {
+  color: darkred; }
+
 .App-header {
   background-color: #1988E8;
   padding: 1.5em;
   color: white;
-  margin-bottom: 1em;
-}
+  margin-bottom: 1em; }
 
 .App-title {
-  font-size: 1.5em;
-}
+  font-size: 1.5em; }
 
 .App-intro {
-  font-size: large;
-}
+  font-size: large; }
