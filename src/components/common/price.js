@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Price = () => (
+const Price = ({oldPrice, currentPrice, condition}) => (
   <div className="price">
-    <p className="old-price">£100</p>
-    <p className="current-price">£99</p>
-    <p className="condition">Free Cancellation</p>
+    {!!oldPrice && <p className="old-price">{oldPrice}</p>}
+    {!!currentPrice && <p className="current-price">{currentPrice}</p>}
+    {!!condition && <p className="condition">{condition}</p>}
   </div>
 )
 

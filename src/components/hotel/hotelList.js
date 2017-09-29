@@ -5,7 +5,14 @@ import Hotel from './hotel'
 const HotelList = ({hotels}) => (
   <section className="hotel-list">
     {hotels.map((hotel, index) => (
-      <Hotel key={index} name={hotel.name} guestVote={hotel.guestVote} images={hotel.images} offers={hotel.offers}/>
+      <Hotel
+        key={index}
+        name={hotel.name}
+        guestVote={hotel.guestVote}
+        placeShort={hotel.placeShort}
+        images={hotel.images}
+        offers={hotel.offers}
+      />
     ))}
   </section>
 )

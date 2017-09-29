@@ -22,4 +22,11 @@ const Description = ({name, placeShort, reviewCount, startRating, guestVote}) =>
   </div>
 )
 
+Description.propTypes = {
+  name: PropTypes.string,
+  placeShort: PropTypes.string,
+  reviewCount: PropTypes.number,
+  guestVote: PropTypes.number
+}
+
 export default Description

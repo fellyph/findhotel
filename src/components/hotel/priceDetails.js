@@ -1,9 +1,9 @@
 import React from 'react'
-import Price from '../common/price'
+import Offer from '../offer/offer'
 
-const PriceDetails = () => (
+const PriceDetails = ({offers}) => (
   <div className="price-details">
-    <Price />
+    <Offer />
 
     <ul className="options">
       <li><button>Booking.com</button></li>
