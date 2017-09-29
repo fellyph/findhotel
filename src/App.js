@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import HotelList from './components/hotel/hotelList'
+import HotelContent from './components/hotel/hotelContent'
 import './App.css';
 
 class App extends Component {
@@ -8,6 +8,8 @@ class App extends Component {
     super()
     this.state = {
       hotels: [],
+      hotelsSortByPriceAsc : [],
+      hotelsSortByPriceDesc : []
     }
   }
 
@@ -28,13 +30,25 @@ class App extends Component {
     this.getHotel()
   }
 
+  sortByPriceAsc () {
+    this.setState(prevState => {
+      this.state.hotels.sort((hotela,hotelb) => (hotela.offers.price - hotelb.offers.price))
+    })
+  }
+
+  sortByPriceDesc () {
+    this.setState(prevState => {
+      this.state.hotels.sort((hotela,hotelb) => (hotelb.offers.price - hotela.offers.price))
+    })
+  }
+
   render () {
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Findhotel</h1>
         </header>
-        {!!this.state.hotels && <HotelList hotels={this.state.hotels} />}
+        <HotelContent handleFilter={this.sortByPriceAsc()} hotels={this.state.hotels} />
       </div>
     );
   }
