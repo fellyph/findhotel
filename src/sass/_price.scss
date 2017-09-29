@@ -29,4 +29,21 @@
     list-style: none;
     padding: 0;
   }
+
+  .btn {
+    border: none;
+    background: $secondary;
+    padding: 0.7em 1em;
+    border-radius: 2em;
+    color: white;
+  }
+
+  .offer {
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+  }
+
+  .price {
+    font-size: 1em;
+  }
  }

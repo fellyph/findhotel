@@ -1,3 +1,16 @@
+.hotel-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1em;
+  width: 1200px;
+
+  .filter {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
 .hotel {
   background: #fff;
   display: flex;
@@ -28,13 +41,20 @@
   .key-words {
     li {
        background-color: $greylight;
-       padding: 1em;
+       padding: 0.7em 1em;
        border-radius: 2em;
+       font-size: 0.8em;
+       margin-bottom: 0.5em;
     }
   }
 
   .location {
     color: $primary;
+  }
+
+  .title {
+    margin-top: 0;
+    font-size: 1.2em;
   }
 
   .thumb {

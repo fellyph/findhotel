@@ -10,6 +10,16 @@
 .App-intro {
   font-size: large; }
 
+.hotel-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 1em;
+  width: 1200px; }
+  .hotel-container .filter {
+    display: block;
+    margin-bottom: 1em; }
+
 .hotel {
   background: #fff;
   display: flex;
@@ -29,10 +39,15 @@
     color: #FF3B00; }
   .hotel .key-words li {
     background-color: #F0F0F0;
-    padding: 1em;
-    border-radius: 2em; }
+    padding: 0.7em 1em;
+    border-radius: 2em;
+    font-size: 0.8em;
+    margin-bottom: 0.5em; }
   .hotel .location {
     color: #1988E8; }
+  .hotel .title {
+    margin-top: 0;
+    font-size: 1.2em; }
   .hotel .thumb {
     margin: 0;
     position: relative; }
@@ -66,3 +81,14 @@
   .price-details .options {
     list-style: none;
     padding: 0; }
+  .price-details .btn {
+    border: none;
+    background: #FF3B00;
+    padding: 0.7em 1em;
+    border-radius: 2em;
+    color: white; }
+  .price-details .offer {
+    font-size: 0.9em;
+    margin-bottom: 0.5em; }
+  .price-details .price {
+    font-size: 1em; }

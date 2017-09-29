@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import HotelContent from './components/hotel/hotelContent'
+
 import './App.css';
 
 class App extends Component {
@@ -35,8 +36,8 @@ class App extends Component {
     this.getHotel()
   }
 
-  sortBy (type) {
-    console.log(type)
+  sortBy (e) {
+    const type = e.target.value
     this.setState(prevState => {
       this[this.state.mapping[type]]
     })
@@ -47,11 +48,11 @@ class App extends Component {
   )
 
   sortByPriceAsc  = () => (
-    this.state.hotels.sort((hotela,hotelb) => (hotela.offers.price - hotelb.offers.price))
+    this.state.hotels.sort((hotela,hotelb) => (hotela.offers.totalRate - hotelb.offers.totalRate))
   )
 
   sortByPriceDesc = () => (
-    this.state.hotels.sort((hotela,hotelb) => (hotelb.offers.price - hotela.offers.price))
+    this.state.hotels.sort((hotela,hotelb) => (hotelb.offers.totalRate - hotela.offers.totalRate))
   )
 
   render () {
