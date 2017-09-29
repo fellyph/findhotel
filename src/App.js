@@ -8,8 +8,13 @@ class App extends Component {
     super()
     this.state = {
       hotels: [],
-      hotelsSortByPriceAsc : [],
-      hotelsSortByPriceDesc : []
+      hotelsSortByPrice : [],
+      hotelsSortBySupplier : [],
+      mapping : {
+        sortBySupplier : 'supplier',
+        sortByPriceAsc : 'price',
+        sortByPriceAndSupplier : 'price-supplier'
+      }
     }
   }
 
@@ -30,17 +35,24 @@ class App extends Component {
     this.getHotel()
   }
 
-  sortByPriceAsc () {
+  sortBy (type) {
+    console.log(type)
     this.setState(prevState => {
-      this.state.hotels.sort((hotela,hotelb) => (hotela.offers.price - hotelb.offers.price))
+      this[this.state.mapping[type]]
     })
   }
 
-  sortByPriceDesc () {
-    this.setState(prevState => {
-      this.state.hotels.sort((hotela,hotelb) => (hotelb.offers.price - hotela.offers.price))
-    })
-  }
+  sortBySupplier = () => (
+    this.state.hotels.sort((hotela,hotelb) => (hotela.starRating - hotelb.starRating))
+  )
+
+  sortByPriceAsc  = () => (
+    this.state.hotels.sort((hotela,hotelb) => (hotela.offers.price - hotelb.offers.price))
+  )
+
+  sortByPriceDesc = () => (
+    this.state.hotels.sort((hotela,hotelb) => (hotelb.offers.price - hotela.offers.price))
+  )
 
   render () {
     return (
@@ -48,7 +60,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Findhotel</h1>
         </header>
-        <HotelContent handleFilter={this.sortByPriceAsc()} hotels={this.state.hotels} />
+        <HotelContent
+          handleFilter={(e) => this.sortBy(e)}
+          hotels={this.state.hotels} />
       </div>
     );
   }

@@ -5,7 +5,7 @@ import SortControl from '../control/sortControl'
 
 const HotelContent = ({handleFilter, hotels}) => (
   <div className="hotel-container">
-    <SortControl />
+    <SortControl handleFilter={handleFilter} />
     {!!hotels && <HotelList hotels={hotels} />}
   </div>
 )

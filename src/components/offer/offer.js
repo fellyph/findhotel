@@ -3,10 +3,10 @@ import Price from '../common/price'
 import PropTypes from 'prop-types'
 
 const Offer = ({hasFreeCancelation, isBest, provider, totalRate}) => (
-  <p className="offer {!!isBest && 'is-best'}">
+  <div className="offer {!!isBest && 'is-best'}">
     {!!isBest && <Price />}
     {provider.name}
-  </p>
+  </div>
 )
 
 Offer.propTypes = {
