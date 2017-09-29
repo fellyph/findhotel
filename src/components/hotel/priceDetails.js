@@ -1,16 +1,23 @@
 import React from 'react'
 import Offer from '../offer/offer'
+import PropTypes from 'prop-types'
 
 const PriceDetails = ({offers}) => (
   <div className="price-details">
-    <Offer />
-
-    <ul className="options">
-      <li><button>Booking.com</button></li>
-      <li><button>price.com</button></li>
-      <li><button>7ideas.com</button></li>
-    </ul>
+    {offers.map((offer, index) => (
+      <Offer
+        isBest={offer.isBest}
+        key={index}
+        hasFreeCancelation={offer}
+        totalRate={offer.totalRate}
+        provider={offer.provider}
+      />
+    ))}
   </div>
 )
+
+PriceDetails.propTypes = {
+  offers: PropTypes.array
+}
 
 export default PriceDetails
