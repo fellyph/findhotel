@@ -1,8 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Details = () => (
+const Description = ({name, placeShort, reviewCount, startRating, guestVote}) => (
   <div className="description">
-    <h2>Quentin Amsterdam Hotel</h2>
+    <h2 className="title">{name}</h2>
     <ul className="stars">
       <li className="filled">*</li>
       <li className="filled">*</li>
@@ -10,8 +11,8 @@ const Details = () => (
       <li>*</li>
       <li>*</li>
     </ul>
-    <p className="location">120m to city</p>
-    <p className="refer">:)</p>
+    <p className="location">{placeShort}</p>
+    <p className="refer">:) {guestVote}</p>
     <ul className="key-words">
       <li>Amazing SPA</li>
       <li>Good Food</li>
@@ -21,4 +22,4 @@ const Details = () => (
   </div>
 )
 
-export default Details
+export default Description

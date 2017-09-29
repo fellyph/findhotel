@@ -4,8 +4,8 @@ import Description from './description'
 import Thumb from '../common/thumb'
 import PropTypes from 'prop-types'
 
-const Offer = ({name, images, placeShort, reviewCount, startRating, guestVote, offers}) => (
-  <div className="offer">
+const Hotel = ({name, images, placeShort, reviewCount, startRating, guestVote, offers}) => (
+  <div className="hotel">
     <Thumb images={images} />
     <Description name={name} placeShort={placeShort} reviewCount={reviewCount} startRating={startRating} guestVote={guestVote} />
     <PriceDetails offers={offers} />
@@ -13,7 +13,7 @@ const Offer = ({name, images, placeShort, reviewCount, startRating, guestVote, o
 )
 
 
-Offer.propTypes = {
+Hotel.propTypes = {
   name: PropTypes.string,
   images: PropTypes.array,
   startRating: PropTypes.number,
@@ -22,4 +22,4 @@ Offer.propTypes = {
   offers: PropTypes.array
 }
 
-export default Offer
+export default Hotel

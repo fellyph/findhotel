@@ -10,33 +10,33 @@
 .App-intro {
   font-size: large; }
 
-.offer {
+.hotel {
   background: #fff;
   display: flex;
   margin-bottom: 1em; }
-  .offer .description {
+  .hotel .description {
     width: 50%;
     padding: 1em; }
-  .offer .key-words,
-  .offer .stars {
+  .hotel .key-words,
+  .hotel .stars {
     list-style: none;
     padding: 0; }
-    .offer .key-words li,
-    .offer .stars li {
+    .hotel .key-words li,
+    .hotel .stars li {
       display: inline-block;
       margin-right: 1em; }
-  .offer .stars .filled {
+  .hotel .stars .filled {
     color: #FF3B00; }
-  .offer .key-words li {
+  .hotel .key-words li {
     background-color: #F0F0F0;
     padding: 1em;
     border-radius: 2em; }
-  .offer .location {
+  .hotel .location {
     color: #1988E8; }
-  .offer .thumb {
+  .hotel .thumb {
     margin: 0;
     position: relative; }
-    .offer .thumb .title {
+    .hotel .thumb .title {
       background: #FF3B00;
       color: white;
       font-weight: bold;
