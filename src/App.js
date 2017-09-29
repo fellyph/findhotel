@@ -14,13 +14,19 @@ class App extends Component {
   getOffer () {
     axios.get('/data/fe-challenge.json')
       .then((result) => {
-        console.log('success',result)
-        this.setState({offers: result})
+        console.log('success',result.data)
+        this.setState({
+          offers: result.data
+        })
       })
       .catch((error) => {
         console.log(error)
       })
-}
+  }
+
+  componentDidMount () {
+    this.getOffer()
+  }
 
   render () {
     return (
@@ -28,7 +34,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Findhotel</h1>
         </header>
-        <OfferList offers={this.getOffer()} />
+        {!!this.state.offers && <OfferList offers={this.state.offers} />}
       </div>
     );
   }

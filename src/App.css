@@ -12,7 +12,8 @@
 
 .offer {
   background: #fff;
-  display: flex; }
+  display: flex;
+  margin-bottom: 1em; }
   .offer .description {
     width: 50%;
     padding: 1em; }
