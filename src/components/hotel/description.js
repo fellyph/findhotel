@@ -1,16 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import StarRating from '../common/starRating'
 
-const Description = ({name, placeShort, reviewCount, startRating, guestVote}) => (
+const Description = ({name, placeShort, reviewCount, starRating, guestVote}) => (
   <div className="description">
     <h2 className="title">{name}</h2>
-    <ul className="stars">
-      <li className="filled">*</li>
-      <li className="filled">*</li>
-      <li>*</li>
-      <li>*</li>
-      <li>*</li>
-    </ul>
+    <p className="rating">
+      <StarRating starRating={starRating} />
+    </p>
     <p className="location">{placeShort}</p>
     <p className="refer">:) {guestVote}</p>
     <ul className="key-words">

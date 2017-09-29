@@ -32,8 +32,8 @@
     }
   }
 
-  .stars {
-    .filled {
+  .star {
+    &.filled {
       color: $secondary;
     }
   }

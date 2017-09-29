@@ -4,14 +4,14 @@ import Description from './description'
 import Thumb from '../common/thumb'
 import PropTypes from 'prop-types'
 
-const Hotel = ({name, images, placeShort, reviewCount, startRating, guestVote, offers}) => (
+const Hotel = ({name, images, placeShort, reviewCount, starRating, guestVote, offers}) => (
   <div className="hotel">
     <Thumb images={images} />
     <Description
       name={name}
       placeShort={placeShort}
       reviewCount={reviewCount}
-      startRating={startRating}
+      starRating={starRating}
       guestVote={guestVote}
     />
     <PriceDetails offers={offers} />
@@ -22,7 +22,7 @@ const Hotel = ({name, images, placeShort, reviewCount, startRating, guestVote, o
 Hotel.propTypes = {
   name: PropTypes.string,
   images: PropTypes.array,
-  startRating: PropTypes.number,
+  starRating: PropTypes.number,
   placeShort: PropTypes.string,
   reviewCount: PropTypes.number,
   offers: PropTypes.array

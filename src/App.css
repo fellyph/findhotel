@@ -35,7 +35,7 @@
     .hotel .stars li {
       display: inline-block;
       margin-right: 1em; }
-  .hotel .stars .filled {
+  .hotel .star.filled {
     color: #FF3B00; }
   .hotel .key-words li {
     background-color: #F0F0F0;

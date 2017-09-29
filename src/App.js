@@ -8,21 +8,14 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      hotels: [],
-      hotelsSortByPrice : [],
-      hotelsSortBySupplier : [],
-      mapping : {
-        sortBySupplier : 'supplier',
-        sortByPriceAsc : 'price',
-        sortByPriceAndSupplier : 'price-supplier'
-      }
+      hotels: []
     }
   }
 
   getHotel () {
     axios.get('/data/fe-challenge.json')
       .then((result) => {
-        console.log('success',result.data)
+        console.log(result.data[1])
         this.setState({
           hotels: result.data
         })
@@ -38,22 +31,30 @@ class App extends Component {
 
   sortBy (e) {
     const type = e.target.value
-    this.setState(prevState => {
-      this[this.state.mapping[type]]
-    })
+    if (type === 'supplier') {
+      this.sortBySupplier()
+    } else if (type === 'price') {
+      this.sortByPriceAsc()
+    }
   }
 
-  sortBySupplier = () => (
-    this.state.hotels.sort((hotela,hotelb) => (hotela.starRating - hotelb.starRating))
-  )
+  sortBySupplier () {
+    this.setState( (prevState) => (
+      this.state.hotels.sort((a, b) => (b.starRating - a.starRating))
+    ))
+  }
 
-  sortByPriceAsc  = () => (
-    this.state.hotels.sort((hotela,hotelb) => (hotela.offers.totalRate - hotelb.offers.totalRate))
-  )
+  sortByPriceAsc () {
+    this.setState( (prevState) => (
+      this.state.hotels.sort((a, b) => (a.offers[0].totalRate - b.offers[0].totalRate))
+    ))
+  }
 
-  sortByPriceDesc = () => (
-    this.state.hotels.sort((hotela,hotelb) => (hotelb.offers.totalRate - hotela.offers.totalRate))
-  )
+  sortByPriceDesc () {
+    this.setState( (prevState) => (
+      this.state.hotels.sort((a, b) => (b.offers.totalRate - a.offers.totalRate))
+    ))
+  }
 
   render () {
     return (

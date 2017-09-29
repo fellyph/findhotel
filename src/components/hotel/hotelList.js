@@ -12,6 +12,7 @@ const HotelList = ({hotels}) => (
         placeShort={hotel.placeShort}
         images={hotel.images}
         offers={hotel.offers}
+        starRating={hotel.starRating}
       />
     ))}
   </section>
