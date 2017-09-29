@@ -1,0 +1,32 @@
+ .price-details {
+  text-align: center;
+  padding: 1em;
+  border-left: 2px solid $greylight;
+
+  .old-price,
+  .current-price,
+  .condition {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .old-price {
+     text-decoration: line-through;
+     font-size: 1.2em;
+     color: $secondary;
+  }
+
+  .current-price {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  .condition {
+    color: green;
+    font-size: 0.8em
+  }
+
+  .options {
+    list-style: none;
+    padding: 0;
+  }
+ }

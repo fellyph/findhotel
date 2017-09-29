@@ -1,21 +1,3 @@
-.offer {
-  background: #fff;
-  display: flex;
-  width: 100%; }
-
-.offer .description {
-  width: 50%; }
-
-.offer .stars {
-  list-style: none; }
-
-.offer .stars li {
-  display: inline-block;
-  margin-right: 1em; }
-
-.offer .stars li.filled {
-  color: darkred; }
-
 .App-header {
   background-color: #1988E8;
   padding: 1.5em;
@@ -27,3 +9,59 @@
 
 .App-intro {
   font-size: large; }
+
+.offer {
+  background: #fff;
+  display: flex; }
+  .offer .description {
+    width: 50%;
+    padding: 1em; }
+  .offer .key-words,
+  .offer .stars {
+    list-style: none;
+    padding: 0; }
+    .offer .key-words li,
+    .offer .stars li {
+      display: inline-block;
+      margin-right: 1em; }
+  .offer .stars .filled {
+    color: #FF3B00; }
+  .offer .key-words li {
+    background-color: #F0F0F0;
+    padding: 1em;
+    border-radius: 2em; }
+  .offer .location {
+    color: #1988E8; }
+  .offer .thumb {
+    margin: 0;
+    position: relative; }
+    .offer .thumb .title {
+      background: #FF3B00;
+      color: white;
+      font-weight: bold;
+      position: absolute;
+      text-transform: uppercase;
+      top: 10px;
+      padding: 0.5em; }
+
+.price-details {
+  text-align: center;
+  padding: 1em;
+  border-left: 2px solid #F0F0F0; }
+  .price-details .old-price,
+  .price-details .current-price,
+  .price-details .condition {
+    margin: 0 0 0.5rem 0; }
+  .price-details .old-price {
+    text-decoration: line-through;
+    font-size: 1.2em;
+    color: #FF3B00; }
+  .price-details .current-price {
+    font-size: 2em;
+    font-weight: bold; }
+  .price-details .condition {
+    color: green;
+    font-size: 0.8em; }
+  .price-details .options {
+    list-style: none;
+    padding: 0; }

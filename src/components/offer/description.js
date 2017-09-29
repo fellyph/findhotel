@@ -4,8 +4,8 @@ const Details = () => (
   <div className="description">
     <h2>Quentin Amsterdam Hotel</h2>
     <ul className="stars">
-      <li>*</li>
-      <li>*</li>
+      <li className="filled">*</li>
+      <li className="filled">*</li>
       <li>*</li>
       <li>*</li>
       <li>*</li>

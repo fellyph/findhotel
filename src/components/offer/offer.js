@@ -1,12 +1,11 @@
 import React from 'react'
 import PriceDetails from './priceDetails'
 import Description from './description'
+import Thumb from '../common/thumb'
 
 const Offer = () => (
   <div className="offer">
-    <figure className="Thumb">
-      <img src="/img/default.jpg" />
-    </figure>
+    <Thumb />
     <Description />
     <PriceDetails />
   </div>

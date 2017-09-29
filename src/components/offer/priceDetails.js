@@ -2,7 +2,7 @@ import React from 'react'
 import Price from '../common/price'
 
 const PriceDetails = () => (
-  <div className="price">
+  <div className="price-details">
     <Price />
 
     <ul class="options">
