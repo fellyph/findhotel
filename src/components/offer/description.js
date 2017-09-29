@@ -12,7 +12,7 @@ const Details = () => (
     </ul>
     <p className="location">120m to city</p>
     <p className="refer">:)</p>
-    <ul class="key-words">
+    <ul className="key-words">
       <li>Amazing SPA</li>
       <li>Good Food</li>
       <li>Great Location</li>

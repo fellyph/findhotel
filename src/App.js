@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-
+import OfferList from './components/offer/offerList'
 import './App.css';
 
 class App extends Component {
@@ -12,16 +12,15 @@ class App extends Component {
   }
 
   getOffer () {
-    return (e) => {
-      axios.get('https://drive.google.com/file/d/0B-cd6ovbirHacFN0UlpDRzY0dWs/view')
-        .then((result) => {
-          this.setState({offers: result})
-        })
-        .catch((error) => {
-          console.log(error)
-        })
-    }
-  }
+    axios.get('/data/fe-challenge.json')
+      .then((result) => {
+        console.log('success',result)
+        this.setState({offers: result})
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+}
 
   render () {
     return (
@@ -29,6 +28,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Findhotel</h1>
         </header>
+        <OfferList offers={this.getOffer()} />
       </div>
     );
   }
